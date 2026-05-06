@@ -220,7 +220,7 @@ end
 
 ## list_campaigns
 
-> <CampaignList> list_campaigns(project_id)
+> <CampaignList> list_campaigns(project_id, opts)
 
 
 
@@ -237,10 +237,14 @@ end
 
 api_instance = Knievel::CampaignsApi.new
 project_id = 'project_id_example' # String | 
+opts = {
+  limit: 789, # Integer | 
+  cursor: 'cursor_example' # String | 
+}
 
 begin
   
-  result = api_instance.list_campaigns(project_id)
+  result = api_instance.list_campaigns(project_id, opts)
   p result
 rescue Knievel::ApiError => e
   puts "Error when calling CampaignsApi->list_campaigns: #{e}"
@@ -251,12 +255,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<CampaignList>, Integer, Hash)> list_campaigns_with_http_info(project_id)
+> <Array(<CampaignList>, Integer, Hash)> list_campaigns_with_http_info(project_id, opts)
 
 ```ruby
 begin
   
-  data, status_code, headers = api_instance.list_campaigns_with_http_info(project_id)
+  data, status_code, headers = api_instance.list_campaigns_with_http_info(project_id, opts)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CampaignList>
@@ -270,6 +274,8 @@ end
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **project_id** | **String** |  |  |
+| **limit** | **Integer** |  | [optional] |
+| **cursor** | **String** |  | [optional] |
 
 ### Return type
 

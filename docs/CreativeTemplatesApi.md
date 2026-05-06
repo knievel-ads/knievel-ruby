@@ -150,7 +150,7 @@ end
 
 ## list_creative_templates
 
-> <CreativeTemplateList> list_creative_templates(project_id)
+> <CreativeTemplateList> list_creative_templates(project_id, opts)
 
 
 
@@ -167,10 +167,14 @@ end
 
 api_instance = Knievel::CreativeTemplatesApi.new
 project_id = 'project_id_example' # String | 
+opts = {
+  limit: 789, # Integer | 
+  cursor: 'cursor_example' # String | 
+}
 
 begin
   
-  result = api_instance.list_creative_templates(project_id)
+  result = api_instance.list_creative_templates(project_id, opts)
   p result
 rescue Knievel::ApiError => e
   puts "Error when calling CreativeTemplatesApi->list_creative_templates: #{e}"
@@ -181,12 +185,12 @@ end
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<CreativeTemplateList>, Integer, Hash)> list_creative_templates_with_http_info(project_id)
+> <Array(<CreativeTemplateList>, Integer, Hash)> list_creative_templates_with_http_info(project_id, opts)
 
 ```ruby
 begin
   
-  data, status_code, headers = api_instance.list_creative_templates_with_http_info(project_id)
+  data, status_code, headers = api_instance.list_creative_templates_with_http_info(project_id, opts)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <CreativeTemplateList>
@@ -200,6 +204,8 @@ end
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **project_id** | **String** |  |  |
+| **limit** | **Integer** |  | [optional] |
+| **cursor** | **String** |  | [optional] |
 
 ### Return type
 

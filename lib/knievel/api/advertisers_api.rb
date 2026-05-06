@@ -228,6 +228,8 @@ module Knievel
 
     # @param project_id [String] 
     # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :limit 
+    # @option opts [String] :cursor 
     # @return [AdvertiserList]
     def list_advertisers(project_id, opts = {})
       data, _status_code, _headers = list_advertisers_with_http_info(project_id, opts)
@@ -236,6 +238,8 @@ module Knievel
 
     # @param project_id [String] 
     # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :limit 
+    # @option opts [String] :cursor 
     # @return [Array<(AdvertiserList, Integer, Hash)>] AdvertiserList data, response status code and response headers
     def list_advertisers_with_http_info(project_id, opts = {})
       if @api_client.config.debugging
@@ -250,6 +254,8 @@ module Knievel
 
       # query parameters
       query_params = opts[:query_params] || {}
+      query_params[:'limit'] = opts[:'limit'] if !opts[:'limit'].nil?
+      query_params[:'cursor'] = opts[:'cursor'] if !opts[:'cursor'].nil?
 
       # header parameters
       header_params = opts[:header_params] || {}
