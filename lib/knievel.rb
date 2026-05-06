@@ -105,7 +105,21 @@ require 'knievel/models/zone'
 require 'knievel/models/zone_list'
 
 # APIs
-require 'knievel/api/default_api'
+require 'knievel/api/ad_library_api'
+require 'knievel/api/ads_api'
+require 'knievel/api/advertisers_api'
+require 'knievel/api/campaigns_api'
+require 'knievel/api/creative_templates_api'
+require 'knievel/api/creatives_api'
+require 'knievel/api/decisions_api'
+require 'knievel/api/explain_api'
+require 'knievel/api/flights_api'
+require 'knievel/api/orgs_api'
+require 'knievel/api/sites_api'
+require 'knievel/api/system_api'
+require 'knievel/api/taxonomy_api'
+require 'knievel/api/tokens_api'
+require 'knievel/api/zones_api'
 
 module Knievel
   class << self
