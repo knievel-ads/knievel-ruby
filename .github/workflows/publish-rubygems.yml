@@ -1,0 +1,46 @@
+name: Publish to RubyGems
+
+# Triggered when knievel-ads/knievel pushes a `v*` tag onto this
+# repo via the `knievel-pipelines` GitHub App. (App tokens —
+# unlike the default GITHUB_TOKEN — do trigger downstream
+# workflows, which is what makes this chain work.) The gem is
+# rebuilt fresh from the tagged source rather than carried over
+# from knievel's workflow run; the build is fast and avoids
+# cross-workflow artifact passing.
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.2"
+          bundler-cache: false
+
+      - name: Install bundle + build gem
+        run: |
+          set -eu
+          # Generated repo — Gemfile.lock isn't tracked, so do a
+          # fresh resolve every run.
+          bundle config set --local frozen false
+          bundle install --jobs=4
+          rake build
+
+      - name: Push to RubyGems
+        env:
+          GEM_HOST_API_KEY: ${{ secrets.RUBYGEMS_ORG_API_KEY }}
+        run: |
+          set -eu
+          gem_file=$(ls pkg/*.gem | head -n1)
+          test -n "$gem_file"
+          gem push "$gem_file"
