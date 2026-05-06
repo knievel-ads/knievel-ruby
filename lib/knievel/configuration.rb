@@ -157,7 +157,7 @@ module Knievel
 
     def initialize
       @scheme = 'http'
-      @host = 'localhost'
+      @host = 'localhost:8080'
       @base_path = ''
       @server_index = nil
       @server_operation_index = {}
@@ -262,8 +262,8 @@ module Knievel
     def server_settings
       [
         {
-          url: "",
-          description: "No description provided",
+          url: "http://localhost:8080",
+          description: "Local development default; override via your client's host configuration for production.",
         }
       ]
     end
