@@ -9,7 +9,7 @@ All URIs are relative to *http://localhost:8080*
 | [**get_site**](SitesApi.md#get_site) | **GET** /v1/projects/{project_id}/sites/{id} |  |
 | [**list_sites**](SitesApi.md#list_sites) | **GET** /v1/projects/{project_id}/sites |  |
 | [**update_site**](SitesApi.md#update_site) | **PATCH** /v1/projects/{project_id}/sites/{id} |  |
-| [**upsert_site_by_url**](SitesApi.md#upsert_site_by_url) | **POST** /v1/projects/{project_id}/sites:upsertByUrl | Natural-key upsert. Returns the existing row (200) when a site with the same URL exists; otherwise creates (201). Per &#x60;API.md&#x60; § 3.7: &#x60;:upsertByUrl&#x60; is the canonical entry point for URL-driven flows. |
+| [**upsert_site_by_url**](SitesApi.md#upsert_site_by_url) | **POST** /v1/projects/{project_id}/sites/upsert-by-url | Natural-key upsert. Returns the existing row (200) when a site with the same URL exists; otherwise creates (201). Per &#x60;API.md&#x60; § 3.7: &#x60;:upsertByUrl&#x60; is the canonical entry point for URL-driven flows. |
 
 
 ## batch_upsert_sites

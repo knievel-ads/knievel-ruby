@@ -15,6 +15,7 @@ docs/AdsApi.md
 docs/Advertiser.md
 docs/AdvertiserList.md
 docs/AdvertisersApi.md
+docs/AuthApi.md
 docs/AuthBlock.md
 docs/BatchErrorBody.md
 docs/BatchErrorDetail.md
@@ -79,9 +80,11 @@ docs/FlightList.md
 docs/FlightsApi.md
 docs/ForceOverride.md
 docs/IssuerSummary.md
+docs/OrgResponse.md
 docs/OrgsApi.md
 docs/Priority.md
 docs/PriorityList.md
+docs/ProjectList.md
 docs/ProjectResponse.md
 docs/Site.md
 docs/SiteList.md
@@ -101,6 +104,7 @@ docs/UpdateSiteRequest.md
 docs/UpdateZoneRequest.md
 docs/UpsertSiteByUrlRequest.md
 docs/VersionResponse.md
+docs/WhoamiResponse.md
 docs/Zone.md
 docs/ZoneList.md
 docs/ZonesApi.md
@@ -109,6 +113,7 @@ lib/knievel.rb
 lib/knievel/api/ad_library_api.rb
 lib/knievel/api/ads_api.rb
 lib/knievel/api/advertisers_api.rb
+lib/knievel/api/auth_api.rb
 lib/knievel/api/campaigns_api.rb
 lib/knievel/api/creative_templates_api.rb
 lib/knievel/api/creatives_api.rb
@@ -191,8 +196,10 @@ lib/knievel/models/flight.rb
 lib/knievel/models/flight_list.rb
 lib/knievel/models/force_override.rb
 lib/knievel/models/issuer_summary.rb
+lib/knievel/models/org_response.rb
 lib/knievel/models/priority.rb
 lib/knievel/models/priority_list.rb
+lib/knievel/models/project_list.rb
 lib/knievel/models/project_response.rb
 lib/knievel/models/site.rb
 lib/knievel/models/site_list.rb
@@ -208,7 +215,12 @@ lib/knievel/models/update_site_request.rb
 lib/knievel/models/update_zone_request.rb
 lib/knievel/models/upsert_site_by_url_request.rb
 lib/knievel/models/version_response.rb
+lib/knievel/models/whoami_response.rb
 lib/knievel/models/zone.rb
 lib/knievel/models/zone_list.rb
 lib/knievel/version.rb
+spec/api/auth_api_spec.rb
+spec/models/org_response_spec.rb
+spec/models/project_list_spec.rb
+spec/models/whoami_response_spec.rb
 spec/spec_helper.rb
