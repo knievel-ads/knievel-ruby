@@ -219,8 +219,4 @@ lib/knievel/models/whoami_response.rb
 lib/knievel/models/zone.rb
 lib/knievel/models/zone_list.rb
 lib/knievel/version.rb
-spec/api/auth_api_spec.rb
-spec/models/org_response_spec.rb
-spec/models/project_list_spec.rb
-spec/models/whoami_response_spec.rb
 spec/spec_helper.rb
