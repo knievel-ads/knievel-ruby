@@ -11,5 +11,5 @@ Generator version: 7.23.0-SNAPSHOT
 =end
 
 module Knievel
-  VERSION = '0.1.27'
+  VERSION = '0.1.28'
 end
