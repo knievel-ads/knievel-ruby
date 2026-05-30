@@ -64,6 +64,11 @@ docs/CreativesApi.md
 docs/DecisionAd.md
 docs/DecisionBlock.md
 docs/DecisionContext.md
+docs/DecisionCreative.md
+docs/DecisionCreativeHtmlCreative.md
+docs/DecisionCreativeImageCreative.md
+docs/DecisionCreativeNativeCreative.md
+docs/DecisionCreativeTemplatedCreative.md
 docs/DecisionPlacement.md
 docs/DecisionsApi.md
 docs/DecisionsRequest.md
@@ -79,7 +84,10 @@ docs/Flight.md
 docs/FlightList.md
 docs/FlightsApi.md
 docs/ForceOverride.md
+docs/HtmlCreative.md
+docs/ImageCreative.md
 docs/IssuerSummary.md
+docs/NativeCreative.md
 docs/OrgResponse.md
 docs/OrgsApi.md
 docs/Priority.md
@@ -91,6 +99,7 @@ docs/SiteList.md
 docs/SitesApi.md
 docs/SystemApi.md
 docs/TaxonomyApi.md
+docs/TemplatedCreative.md
 docs/TokenListResponse.md
 docs/TokenSummary.md
 docs/TokensApi.md
@@ -183,6 +192,11 @@ lib/knievel/models/creative_template_list.rb
 lib/knievel/models/decision_ad.rb
 lib/knievel/models/decision_block.rb
 lib/knievel/models/decision_context.rb
+lib/knievel/models/decision_creative.rb
+lib/knievel/models/decision_creative_html_creative.rb
+lib/knievel/models/decision_creative_image_creative.rb
+lib/knievel/models/decision_creative_native_creative.rb
+lib/knievel/models/decision_creative_templated_creative.rb
 lib/knievel/models/decision_placement.rb
 lib/knievel/models/decisions_request.rb
 lib/knievel/models/decisions_response.rb
@@ -195,7 +209,10 @@ lib/knievel/models/explain_response.rb
 lib/knievel/models/flight.rb
 lib/knievel/models/flight_list.rb
 lib/knievel/models/force_override.rb
+lib/knievel/models/html_creative.rb
+lib/knievel/models/image_creative.rb
 lib/knievel/models/issuer_summary.rb
+lib/knievel/models/native_creative.rb
 lib/knievel/models/org_response.rb
 lib/knievel/models/priority.rb
 lib/knievel/models/priority_list.rb
@@ -203,6 +220,7 @@ lib/knievel/models/project_list.rb
 lib/knievel/models/project_response.rb
 lib/knievel/models/site.rb
 lib/knievel/models/site_list.rb
+lib/knievel/models/templated_creative.rb
 lib/knievel/models/token_list_response.rb
 lib/knievel/models/token_summary.rb
 lib/knievel/models/update_ad_library_item_request.rb
@@ -219,4 +237,13 @@ lib/knievel/models/whoami_response.rb
 lib/knievel/models/zone.rb
 lib/knievel/models/zone_list.rb
 lib/knievel/version.rb
+spec/models/decision_creative_html_creative_spec.rb
+spec/models/decision_creative_image_creative_spec.rb
+spec/models/decision_creative_native_creative_spec.rb
+spec/models/decision_creative_spec.rb
+spec/models/decision_creative_templated_creative_spec.rb
+spec/models/html_creative_spec.rb
+spec/models/image_creative_spec.rb
+spec/models/native_creative_spec.rb
+spec/models/templated_creative_spec.rb
 spec/spec_helper.rb

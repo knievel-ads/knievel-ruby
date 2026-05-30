@@ -33,6 +33,9 @@ module Knievel
 
     attr_accessor :impression_url
 
+    # The selected ad's creative, typed by `kind` (`API.md` § 1 `oneOf`). `null` when the ad has no creative attached or the snapshot hasn't loaded it yet. For `templated` creatives the `body` is rendered server-side at decision time; the other kinds carry their stored fields verbatim.
+    attr_accessor :creative
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -44,7 +47,8 @@ module Knievel
         :'priority_id' => :'priority_id',
         :'site_id' => :'site_id',
         :'click_url' => :'click_url',
-        :'impression_url' => :'impression_url'
+        :'impression_url' => :'impression_url',
+        :'creative' => :'creative'
       }
     end
 
@@ -69,7 +73,8 @@ module Knievel
         :'priority_id' => :'Integer',
         :'site_id' => :'Integer',
         :'click_url' => :'String',
-        :'impression_url' => :'String'
+        :'impression_url' => :'String',
+        :'creative' => :'DecisionCreative'
       }
     end
 
@@ -147,6 +152,10 @@ module Knievel
         self.impression_url = attributes[:'impression_url']
       else
         self.impression_url = nil
+      end
+
+      if attributes.key?(:'creative')
+        self.creative = attributes[:'creative']
       end
     end
 
@@ -313,7 +322,8 @@ module Knievel
           priority_id == o.priority_id &&
           site_id == o.site_id &&
           click_url == o.click_url &&
-          impression_url == o.impression_url
+          impression_url == o.impression_url &&
+          creative == o.creative
     end
 
     # @see the `==` method
@@ -325,7 +335,7 @@ module Knievel
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [ad_id, creative_id, flight_id, campaign_id, advertiser_id, priority_id, site_id, click_url, impression_url].hash
+      [ad_id, creative_id, flight_id, campaign_id, advertiser_id, priority_id, site_id, click_url, impression_url, creative].hash
     end
 
     # Builds the object from hash
